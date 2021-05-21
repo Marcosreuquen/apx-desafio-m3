@@ -20,13 +20,14 @@ body {
   height: auto;
   width: 100vw;
 }
-
-/*LANDING*/
-
-.header {
-  height: auto;
-  width: 100vw;
+@media (min-width: 769px) {
+  .seccion {
+    height: 70vh;
+    width: 100vw;
+    box-sizing: border-box;
+  }
 }
+/*LANDING*/
 
 .imagen-de-fondo {
   min-width: 800px;
@@ -152,8 +153,6 @@ body {
   background-color: var(--negro);
   color: var(--blanco);
 
-  height: auto;
-  width: 100vw;
   padding: 100px 0px;
   display: flex;
   flex-direction: column;
@@ -165,7 +164,6 @@ body {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr;
     column-gap: 90px;
-    height: auto;
   }
 }
 .subtitulo {
@@ -219,27 +217,41 @@ body {
 /*MIS SERVICIOS*/
 
 .mis-servicios {
-  height: auto;
   color: var(--casi-negro);
-  margin-bottom: 40px;
-  width: 100%;
-  padding: 100px 0;
+  padding: 30px 0;
 }
 .contenedor-servicios {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
+  margin: 0 40px;
 }
 @media (min-width: 769px) {
   .contenedor-servicios {
+    height: 400px;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     justify-content: space-around;
+    gap: 20px;
   }
 }
 .item-servicios {
-  margin: 48px auto 0 auto;
   text-align: center;
+  background-color: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(5px);
+  border: 0.1px black;
+  border-radius: 50px;
+  box-shadow: 1em 1em 1em var(--gris-clarito);
+  padding: 10px;
+  border: 0.1px solid #00000010;
+  margin-bottom: 20px;
+}
+
+@media (min-width: 769px) {
+  .item-servicios {
+    max-height: 566px;
+    margin-bottom: 0;
+  }
 }
 .sub-subtitulo {
   font-weight: 700;
@@ -248,7 +260,6 @@ body {
 .texto-servicio {
   font-weight: 400;
   font-size: 16px;
-  margin: 0 56.5px;
 }
 
 /*FORMULARIO DE CONTACTO*/
@@ -257,11 +268,7 @@ body {
   font-family: "Open Sans";
   background-color: var(--negro);
   color: var(--blanco);
-
-  height: auto;
-  width: auto;
   padding: 100px 0px;
-
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -297,6 +304,7 @@ body {
 .inputs-formulario {
   margin-top: 9px;
   width: 100%;
+  border-radius: 5px;
 }
 .inputs-formulario:focus {
   box-shadow: 0.5em 0.5em 2.5em var(--primario);
@@ -314,6 +322,7 @@ body {
   color: var(--negro);
   font-weight: 700;
   font-size: 16px;
+  border-radius: 5px;
 }
 .boton:active {
   color: var(--primario);
@@ -323,15 +332,12 @@ body {
 /*FOOTER*/
 
 .footer {
-  height: 50vh;
-  width: 100vw;
   padding: 53px 0px;
   color: var(--casi-negro);
   background-color: var(--casi-blanco);
 }
 @media (min-width: 769px) {
   .footer {
-    height: 300px;
     padding: 100px 0px;
     display: grid;
     grid-template-columns: 1fr 1fr;
