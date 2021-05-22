@@ -16,17 +16,21 @@
 body {
   margin: 0;
   font-family: "Open Sans", Roboto, sans-serif;
-  box-sizing: border-box;
+  /*box-sizing: border-box;*/
   height: auto;
-  width: 100vw;
+  width: 100%;
+  min-width: 450px;
 }
+/*Secciones gral*/
+
 @media (min-width: 769px) {
   .seccion {
-    height: 80vh;
-    width: 100vw;
-    box-sizing: border-box;
+    height: 980px;
+    width: 100%;
+    min-width: 450px;
   }
 }
+
 /*LANDING*/
 
 .header {
@@ -44,8 +48,9 @@ body {
 .imagen-de-fondo > img {
   align-self: center;
   justify-self: center;
+  opacity: 0.7;
+  width: 100%;
   height: 100%;
-  opacity: 0.6;
 }
 
 .barra-menu {
@@ -110,7 +115,13 @@ body {
     color: var(--exito);
   }
 }
-
+.bienvenida-caja {
+  margin: auto;
+  height: 550px;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+}
 .bienvenida {
   margin: auto;
   font-weight: bold;
@@ -169,7 +180,7 @@ body {
   text-align: left;
   margin-top: 42px;
   font-weight: 400;
-  font-size: 16px;
+  font-size: 24px;
   width: 300px;
 }
 @media (min-width: 769px) {
@@ -179,7 +190,7 @@ body {
     max-width: 500px;
     align-self: stretch;
     justify-self: left;
-    font-size: 24px;
+    font-size: 32px;
     grid-row: 2/4;
   }
 }
@@ -203,21 +214,21 @@ body {
 
 .mis-servicios {
   color: var(--casi-negro);
-  padding: 30px 0;
+  padding: 30px 30px;
+  height: auto;
+  min-height: 700px;
 }
 .contenedor-servicios {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  margin: 0 40px;
 }
 @media (min-width: 769px) {
   .contenedor-servicios {
-    height: 400px;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
     justify-content: space-around;
-    gap: 20px;
   }
 }
 .item-servicios {
@@ -227,14 +238,13 @@ body {
   border-radius: 50px;
   box-shadow: 1em 1em 1em var(--gris-clarito);
   border: 0.1px solid #00000010;
-  padding: 30px 0;
-  margin-bottom: 20px;
+  padding: 15px;
+  margin: 20px;
 }
 
 @media (min-width: 769px) {
   .item-servicios {
-    max-height: 566px;
-    margin-bottom: 0;
+    max-width: 350px;
   }
 }
 .sub-subtitulo {
@@ -252,7 +262,6 @@ body {
   font-family: "Open Sans";
   background-color: var(--negro);
   color: var(--blanco);
-  padding: 100px 0px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -260,8 +269,9 @@ body {
 @media (min-width: 769px) {
   .contacto {
     display: grid;
-    grid-template-columns: auto auto;
-    padding: 50px 80px;
+    grid-template-columns: 40% 40%;
+    justify-content: center;
+    align-content: center;
     gap: 75px;
   }
   .contacto > .subtitulo {
@@ -272,13 +282,11 @@ body {
 .formulario {
   box-sizing: border-box;
   padding: 10px 20px;
-  width: 60vw;
-  max-width: 550px;
+  width: 80%;
 }
 .item-formulario {
   display: flex;
   flex-direction: column;
-  margin-top: 27px;
 }
 .label-formulario,
 .inputs-formulario {
@@ -288,7 +296,6 @@ body {
 }
 .inputs-formulario {
   margin-top: 9px;
-  width: 90%;
   border-radius: 5px;
 }
 .inputs-formulario:focus {
@@ -300,7 +307,7 @@ body {
 }
 
 .boton {
-  width: 90%;
+  width: 100%;
   margin-top: 60px;
   height: 45px;
   background-color: var(--primario);
@@ -319,7 +326,7 @@ body {
 .footer {
   padding: 53px 0px;
   color: var(--casi-negro);
-  background-color: #dbdbdb80;
+  background-color: #dbdbdb50;
 }
 @media (min-width: 769px) {
   .footer {
